@@ -1,0 +1,44 @@
+#Archivos excluidos
+#directorio de módulos de dependencia
+node modules/
+/backend/node_modules
+/frontend/node_modules
+
+#Archivos de configuración
+.env
+.DS_Store
+
+#Archivos de compilación y logs
+/backend/dist
+/frontend/dist
+logs/
+tmp/
+
+#archivos de caché
+*.cache/
+
+#archivos de IDE y editor de texto
+.idea/
+.vscode
+
+#Archivos específicos del sistema operativo
+Thumbs.db
+desktop.ini
+
+#Archivos de prueba
+coverage/
+jest/
+test/
+
+#Archivos de documentación
+docs/
+
+#Archivos generados automáticamente
+*.logs
+*.swp
+*.bak
+
+#Documentos personales
+README.md 
+CONTRIBUTTING.md
+CHANGELOG.md
