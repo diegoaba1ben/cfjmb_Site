@@ -12,12 +12,22 @@ export class GatewayData extends Entity {
   @property({
     type: 'string',
     required: true,
+    jsonSchema: {
+      minLength: 3, //Longitud mínima
+      maxLength: 20, //Longitud máxima
+      pattern: '^[a-zA-Z]+$' //solo letras
+    }
   })
   name: string;
 
   @property({
     type: 'string',
     required: true,
+    jsonSchema: {
+      minLength: 3, //Longitud mínima
+      maxLength: 30, //Longitud máxima
+      pattern: '^[a-zA-A]+$', //Solo letras
+    }
   })
   description: string;
 

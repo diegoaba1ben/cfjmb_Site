@@ -162,8 +162,11 @@ export class GateDataControllerController {
   }
   //Sección de validación
   private validateGatewayData(gatewayData: GatewayData): void {
+    if (gatewayData.status === null || gatewayData.status === undefined) {
+      throw new HttpErrors.BadRequest('El campo status no debe ser nulo o undefined');
+    }
     if (gatewayData.status !== true) {
-      throw new HttpErrors.BadRequest('El campo no se encuentra activo')
+      throw new HttpErrors.BadRequest('El campo status debe ser true');
     }
   }
 }
