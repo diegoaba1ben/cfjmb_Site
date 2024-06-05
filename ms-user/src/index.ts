@@ -1,9 +1,11 @@
-import {ApplicationConfig, ProjectApplication} from './application';
+import {ApplicationConfig, MsUserApplication} from './application';
 
 export * from './application';
 
+// Función principal para iniciar la aplicación
 export async function main(options: ApplicationConfig = {}) {
-  const app = new ProjectApplication(options);
+  const app = new MsUserApplication(options);
+  // Bootstraping de la aplicación
   await app.boot();
   await app.start();
 
@@ -15,7 +17,7 @@ export async function main(options: ApplicationConfig = {}) {
 }
 
 if (require.main === module) {
-  // Run the application
+  // Configuración de la aplicación
   const config = {
     rest: {
       port: +(process.env.PORT ?? 3000),
@@ -37,3 +39,5 @@ if (require.main === module) {
     process.exit(1);
   });
 }
+
+

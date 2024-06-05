@@ -8,8 +8,8 @@ const config = {
   host: 'localhost',
   port: 3306,
   user: '',
-  password: 'Ad-CfjmB-01',
-  database: ''
+  password: '',
+  database: 'cfjmbDb'
 };
 
 // Observe application's life cycle to disconnect the datasource when
